@@ -39,7 +39,7 @@
     .nav-logo {
       display: flex; align-items: center; gap: 0.75rem;
     }
-    .nav-logo img { height: 72px; width: 72px; object-fit: contain; }
+    .nav-logo img { height: 100px; width: 100px; object-fit: contain; }
     .nav-logo-text {
       font-family: 'Playfair Display', serif;
       font-size: 0.88rem; font-weight: 700;
@@ -603,8 +603,8 @@
     /* ── VIDEO SECTION ── */
     #video { background: var(--dark); padding: 5rem 5%; }
     .video-layout {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: center;
+      display: grid; grid-template-columns: 3fr 2fr;
+      gap: 3rem; align-items: center;
     }
     .video-left {}
     .video-embed-wrap {
@@ -696,7 +696,7 @@
     }
     .footer-left { display: flex; align-items: center; gap: 1.2rem; }
     .footer-logo {
-      height: 52px; width: 52px; border-radius: 50%;
+      height: 168px; width: 168px; border-radius: 50%;
       object-fit: contain;
     }
     .footer-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--gold); }
@@ -1054,6 +1054,26 @@
       .worship-mosaic { grid-template-columns: 1fr; }
     }
 
+    /* ── PROPHET PHOTO STRIP ── */
+    .prophet-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      height: 340px;
+      gap: 0.5rem;
+    }
+    .prophet-strip .gallery-item img {
+      filter: brightness(0.82) saturate(0.9);
+    }
+    .prophet-strip .gallery-item:hover img {
+      filter: brightness(1) saturate(1);
+    }
+    @media (max-width: 900px) {
+      .prophet-strip { grid-template-columns: repeat(3, 1fr); height: 260px; }
+    }
+    @media (max-width: 560px) {
+      .prophet-strip { grid-template-columns: repeat(2, 1fr); height: 220px; }
+    }
+
     /* ── SOTP PHOTO STRIP ── */
     .sotp-photo-strip {
       display: grid; grid-template-columns: repeat(3, 1fr);
@@ -1210,6 +1230,39 @@
       </div>
     </div>
   </section>
+
+  <!-- PROPHET IGINLA PHOTO STRIP 2: after invitation video -->
+  <div style="background: var(--dark-mid); padding: 0 0 0.5rem;">
+    <div style="padding: 3rem 5% 1.5rem;">
+      <div class="section-tag" style="justify-content:center; display:flex;"><span></span>The Man Behind the Anointing<span></span></div>
+    </div>
+    <div class="prophet-strip">
+      <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/650594716_1534750131342757_4812918398873085636_n.jpg">
+        <img src="church-images/pastor-iginla-portrait/650594716_1534750131342757_4812918398873085636_n.jpg" alt="Prophet Joshua Iginla" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/iginla-preaching/657527239_1546734653477638_4502868456232760462_n.jpg">
+        <img src="church-images/iginla-preaching/657527239_1546734653477638_4502868456232760462_n.jpg" alt="Prophet Iginla preaching" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/655758402_1541071410710629_7060552784118243263_n.jpg">
+        <img src="church-images/pastor-iginla-portrait/655758402_1541071410710629_7060552784118243263_n.jpg" alt="Prophet Joshua Iginla" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/iginla-preaching/658362671_1546734386810998_2607368894365548947_n.jpg">
+        <img src="church-images/iginla-preaching/658362671_1546734386810998_2607368894365548947_n.jpg" alt="Prophet Iginla at the pulpit" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/656283775_1543233350494435_9208020694491273966_n.jpg">
+        <img src="church-images/pastor-iginla-portrait/656283775_1543233350494435_9208020694491273966_n.jpg" alt="Prophet Joshua Iginla" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/iginla-preaching/658882068_1546734406810996_8770116072703724737_n.jpg">
+        <img src="church-images/iginla-preaching/658882068_1546734406810996_8770116072703724737_n.jpg" alt="Prophet Iginla ministering" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- DETAILS -->
   <section id="details">
@@ -1876,6 +1929,39 @@
     </div>
   </section>
 
+  <!-- PROPHET IGINLA PHOTO STRIP -->
+  <div style="background: var(--dark); padding: 0 0 0.5rem;">
+    <div style="padding: 3rem 5% 1.5rem;">
+      <div class="section-tag" style="justify-content:center; display:flex;"><span></span>The Man Behind the Anointing<span></span></div>
+    </div>
+    <div class="prophet-strip">
+      <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/656940886_1541071680710602_5471251189345638470_n.jpg">
+        <img src="church-images/pastor-iginla-portrait/656940886_1541071680710602_5471251189345638470_n.jpg" alt="Prophet Joshua Iginla" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/iginla-preaching/658185988_1546734426810994_7065359563931340963_n.jpg">
+        <img src="church-images/iginla-preaching/658185988_1546734426810994_7065359563931340963_n.jpg" alt="Prophet Iginla preaching" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/657057691_1541071747377262_7792648525083239255_n.jpg">
+        <img src="church-images/pastor-iginla-portrait/657057691_1541071747377262_7792648525083239255_n.jpg" alt="Prophet Joshua Iginla" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/iginla-preaching/659096317_1546734480144322_3707480105531536470_n.jpg">
+        <img src="church-images/iginla-preaching/659096317_1546734480144322_3707480105531536470_n.jpg" alt="Prophet Iginla ministering" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/658764907_1546384613512642_2321103427999228624_n.jpg">
+        <img src="church-images/pastor-iginla-portrait/658764907_1546384613512642_2321103427999228624_n.jpg" alt="Prophet Joshua Iginla" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" data-src="church-images/iginla-preaching/658926042_1546734473477656_2397863222543393772_n.jpg">
+        <img src="church-images/iginla-preaching/658926042_1546734473477656_2397863222543393772_n.jpg" alt="Prophet Iginla preaching" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- SHORTS: MIRACLES & MINISTRATION -->
   <section id="shorts">
     <div class="section-inner">
@@ -2104,9 +2190,9 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-left">
-      <img class="footer-logo" src="JOSHUA IGINLA MINISTRIES.png" alt="Joshua Iginla Ministries" style="height:70px; width:70px;" />
+      <img class="footer-logo" src="JOSHUA IGINLA MINISTRIES.png" alt="Joshua Iginla Ministries" />
       <div style="width:1px; height:40px; background:rgba(201,151,58,0.2);"></div>
-      <img class="footer-logo" src="champions-logo.png" alt="Champions Royal Assembly" />
+      <img src="champions-logo.png" alt="Champions Royal Assembly" style="height:80px; width:80px; object-fit:contain;" />
       <div class="footer-name">
         Nigeria: Mighty Turnaround 2026
         <span>Champions Royal Assembly · 29–31 May 2026 · Kubwa, Abuja</span>
