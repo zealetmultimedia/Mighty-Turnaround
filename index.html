@@ -823,6 +823,169 @@
     .lightbox-close:hover { background: rgba(201,151,58,0.3); }
     .gallery-item { cursor: zoom-in; }
 
+    /* ── SCHOOL OF THE PROPHET ── */
+    #sotp {
+      position: relative; padding: 7rem 5%; overflow: hidden;
+      background: var(--dark-mid);
+    }
+    #sotp::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 80% 50%, rgba(201,151,58,0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 10% 50%, rgba(201,151,58,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .sotp-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: start;
+    }
+    .sotp-left {}
+    .sotp-alert {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: rgba(255,80,80,0.1); border: 1px solid rgba(255,80,80,0.3);
+      border-radius: 100px; padding: 0.4rem 1rem;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #FF8080; margin-bottom: 1.4rem;
+    }
+    .sotp-alert-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: #FF5050;
+      animation: pulse-dot 1.4s infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+    .sotp-theme {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: linear-gradient(135deg, var(--gold), #9A7020);
+      color: var(--dark); font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 0.5rem 1.2rem; border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+    .sotp-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 900; line-height: 1.1; color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .sotp-title em { font-style: italic; color: var(--gold); }
+    .sotp-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; font-style: italic;
+      color: var(--gold-pale); margin-bottom: 1.8rem; opacity: 0.85;
+    }
+    .sotp-body { font-size: 0.97rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+    .sotp-body strong { color: var(--off-white); }
+    .sotp-dates {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.8rem 0;
+    }
+    .sotp-date-pill {
+      display: flex; flex-direction: column;
+      background: var(--dark-card); border: 1px solid rgba(201,151,58,0.2);
+      border-radius: 4px; padding: 0.8rem 1.2rem;
+    }
+    .sotp-date-pill .dp-label {
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem;
+    }
+    .sotp-date-pill .dp-val {
+      font-family: 'Playfair Display', serif; font-size: 1rem;
+      font-weight: 700; color: var(--white);
+    }
+    .sotp-right {}
+    .sotp-card {
+      background: var(--dark-card); border: 1px solid rgba(201,151,58,0.25);
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+    .sotp-card-header {
+      background: linear-gradient(135deg, rgba(201,151,58,0.2), rgba(201,151,58,0.06));
+      padding: 1.6rem 2rem;
+      border-bottom: 1px solid rgba(201,151,58,0.15);
+    }
+    .sotp-card-header h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem;
+      font-weight: 700; color: var(--white); margin-bottom: 0.3rem;
+    }
+    .sotp-card-header p { font-size: 0.82rem; color: var(--muted); }
+    .sotp-card-body { padding: 2rem; }
+    .sotp-urgency {
+      display: flex; align-items: center; gap: 0.8rem;
+      background: rgba(255,80,80,0.08); border: 1px solid rgba(255,80,80,0.2);
+      border-radius: 4px; padding: 0.9rem 1rem; margin-bottom: 1.5rem;
+    }
+    .sotp-urgency-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .sotp-urgency p { font-size: 0.82rem; color: rgba(255,180,180,0.9); line-height: 1.5; }
+    .sotp-urgency p strong { color: #FF8080; }
+    .sotp-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.8rem; }
+    .sotp-features li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.88rem; color: var(--off-white); line-height: 1.5;
+    }
+    .sotp-features li::before {
+      content: '✦'; color: var(--gold); flex-shrink: 0;
+      font-size: 0.6rem; margin-top: 0.25rem;
+    }
+    .sotp-phone {
+      display: flex; align-items: center; gap: 0.7rem;
+      background: rgba(201,151,58,0.07); border: 1px solid rgba(201,151,58,0.15);
+      border-radius: 4px; padding: 0.8rem 1rem; margin-top: 1rem;
+      font-size: 0.9rem; font-weight: 600; color: var(--white);
+    }
+    .sotp-phone span { color: var(--gold); font-size: 1rem; }
+    @media (max-width: 900px) { .sotp-layout { grid-template-columns: 1fr; } }
+
+    /* ── FAQ ── */
+    #faq { background: var(--dark); }
+    .faq-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start; margin-top: 3rem;
+    }
+    .faq-left {}
+    .faq-left .section-body { margin-bottom: 2rem; }
+    .faq-cta-card {
+      background: linear-gradient(135deg, rgba(201,151,58,0.12), rgba(201,151,58,0.04));
+      border: 1px solid rgba(201,151,58,0.25); border-radius: 6px;
+      padding: 2rem; margin-top: 1rem;
+    }
+    .faq-cta-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.2rem;
+      font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .faq-cta-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; }
+    .faq-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .faq-item {
+      background: var(--dark-card); border: 1px solid rgba(201,151,58,0.1);
+      border-radius: 4px; overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .faq-item.open { border-color: rgba(201,151,58,0.3); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 1.4rem; gap: 1rem; text-align: left;
+    }
+    .faq-q-text {
+      font-size: 0.95rem; font-weight: 600; color: var(--white); line-height: 1.4;
+    }
+    .faq-icon {
+      flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+      background: rgba(201,151,58,0.1); border: 1px solid rgba(201,151,58,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 1rem; line-height: 1;
+      transition: transform 0.3s, background 0.2s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: rgba(201,151,58,0.2); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 1.4rem;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 1.4rem 1.2rem; }
+    .faq-answer p { font-size: 0.88rem; color: var(--muted); line-height: 1.8; }
+    @media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+
     /* ── FLOATING CTA ── */
     .floating-cta {
       position: fixed; bottom: 6rem; right: 1.5rem; z-index: 190;
@@ -851,6 +1014,58 @@
     }
     .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
     .whatsapp-float svg { width: 26px; height: 26px; fill: white; }
+
+    /* ── PHOTO GALLERY ── */
+    #photo-gallery { background: var(--dark); }
+    .pgallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 260px;
+      gap: 0.7rem;
+      margin-top: 3rem;
+    }
+    .pgallery-tall { grid-row: span 2; }
+    .pgallery-wide { grid-column: span 2; }
+    .pgallery-grid .gallery-item { border-radius: 4px; overflow: hidden; }
+    @media (max-width: 900px) {
+      .pgallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+      .pgallery-tall { grid-row: span 1; }
+      .pgallery-wide { grid-column: span 1; }
+    }
+    @media (max-width: 560px) {
+      .pgallery-grid { grid-template-columns: 1fr; grid-auto-rows: 240px; }
+    }
+
+    /* ── WORSHIP STRIP ── */
+    #worship { background: var(--dark-mid); }
+    .worship-mosaic {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.6fr;
+      grid-template-rows: 260px 260px;
+      gap: 0.7rem;
+      margin-top: 3rem;
+    }
+    .worship-tall { grid-row: span 2; }
+    @media (max-width: 900px) {
+      .worship-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; }
+      .worship-tall { grid-row: span 1; }
+    }
+    @media (max-width: 560px) {
+      .worship-mosaic { grid-template-columns: 1fr; }
+    }
+
+    /* ── SOTP PHOTO STRIP ── */
+    .sotp-photo-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem; margin-top: 1.8rem;
+      border-radius: 6px; overflow: hidden; height: 130px;
+    }
+    .sotp-photo-strip img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(0.72) saturate(0.8);
+      transition: filter 0.3s;
+    }
+    .sotp-photo-strip img:hover { filter: brightness(0.9) saturate(1); }
 
     /* ── FADE IN ── */
     .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
@@ -1134,6 +1349,75 @@
     </div>
   </section>
 
+  <!-- SCHOOL OF THE PROPHET -->
+  <section id="sotp">
+    <div class="section-inner">
+      <div class="sotp-layout">
+
+        <div class="sotp-left fade-in">
+          <div class="sotp-alert"><span class="sotp-alert-dot"></span>Prophetic Call — Registration Open</div>
+          <div class="sotp-theme">✦ Acts of the Prophets</div>
+          <h2 class="sotp-title">School of<br />the <em>Prophet</em></h2>
+          <p class="sotp-subtitle">Step into the next dimension of your prophetic journey</p>
+
+          <p class="sotp-body">
+            This is more than a course — it is a <strong>divine summons</strong>. The School of the Prophet runs from <strong>25th to 31st May 2026</strong>, beginning four days before the main convention and continuing alongside it through to the end.
+          </p>
+          <p class="sotp-body">
+            Themed <strong>"Acts of the Prophets"</strong>, this intensive mini-course is designed for those called to prophetic ministry — equipping you with the scriptural foundation, spiritual depth, and practical understanding of how to operate in the prophetic dimension. Under the direct teaching and impartation of Prophet Joshua Iginla, you will be trained, activated, and released.
+          </p>
+
+          <div class="sotp-dates">
+            <div class="sotp-date-pill">
+              <span class="dp-label">School Opens</span>
+              <span class="dp-val">Sunday 25th May 2026</span>
+            </div>
+            <div class="sotp-date-pill">
+              <span class="dp-label">School Closes</span>
+              <span class="dp-val">Sunday 31st May 2026</span>
+            </div>
+            <div class="sotp-date-pill">
+              <span class="dp-label">Runs Alongside</span>
+              <span class="dp-val">Main Convention 29–31 May</span>
+            </div>
+          </div>
+          <div class="sotp-photo-strip">
+            <img src="church-images/congregants-writing/657382292_1546732996811137_4073936507398097619_n.jpg" alt="Attendees taking notes" />
+            <img src="church-images/congregants-writing/658700652_1546732953477808_1091953594075513900_n.jpg" alt="School attendees writing" />
+            <img src="church-images/congregants-writing/658949832_1546732926811144_1580414883278842327_n.jpg" alt="Prophetic school in session" />
+          </div>
+        </div>
+
+        <div class="sotp-right fade-in fade-delay-2">
+          <div class="sotp-card">
+            <div class="sotp-card-header">
+              <h3>Secure Your Place Today</h3>
+              <p>Limited slots — registration closes soon</p>
+            </div>
+            <div class="sotp-card-body">
+              <div class="sotp-urgency">
+                <span class="sotp-urgency-icon">⚠️</span>
+                <p><strong>Slots are filling up FAST.</strong> There is a designated number of participants — once full, registration closes immediately.</p>
+              </div>
+              <ul class="sotp-features">
+                <li>7 days of intensive prophetic training with Prophet Joshua Iginla</li>
+                <li>Deep scriptural teaching on the Acts of the Prophets</li>
+                <li>Prophetic activation and personal impartation sessions</li>
+                <li>Runs alongside the main Mighty Turnaround convention</li>
+                <li>Open to all who feel the call to the prophetic ministry</li>
+              </ul>
+              <a href="https://forms.gle/BJMQFVS4SuYVQmn27" target="_blank" rel="noopener" class="btn-primary" style="width:100%; justify-content:center; margin-bottom:1rem;">Register for School of the Prophet →</a>
+              <div class="sotp-phone">
+                <span>📞</span> +234 813 701 4834
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CTA STRIP 1: after details -->
   <div class="cta-strip">
     <div class="cta-strip-text">
@@ -1154,18 +1438,18 @@
         <div class="gallery-caption">Champions Royal Assembly</div>
       </div>
       <div class="gallery-side">
-        <div class="gallery-item" data-src="gallery6.png">
-          <img src="gallery6.png" alt="Congregation" />
+        <div class="gallery-item" data-src="church-images/church-auditorium/657947604_1546741560143614_1132423938234449417_n.jpg">
+          <img src="church-images/church-auditorium/657947604_1546741560143614_1132423938234449417_n.jpg" alt="Champions Royal Assembly interior" />
           <div class="gallery-item-overlay"></div>
         </div>
-        <div class="gallery-item" data-src="gallery7.png">
-          <img src="gallery7.png" alt="Crowd" />
+        <div class="gallery-item" data-src="church-images/choir/659058666_1546616893489414_2291507715298418547_n.jpg">
+          <img src="church-images/choir/659058666_1546616893489414_2291507715298418547_n.jpg" alt="Champions Royal Assembly Choir" />
           <div class="gallery-item-overlay"></div>
         </div>
       </div>
       <div class="gallery-side">
-        <div class="gallery-item" data-src="miracle1 (2).png">
-          <img src="miracle1 (2).png" alt="Service in session" />
+        <div class="gallery-item" data-src="church-images/iginla-healing/659113201_1546171210200649_644456548108062361_n.jpg">
+          <img src="church-images/iginla-healing/659113201_1546171210200649_644456548108062361_n.jpg" alt="Prophet Iginla healing ministry" />
           <div class="gallery-item-overlay"></div>
         </div>
         <div class="gallery-item" style="background: linear-gradient(135deg, rgba(201,151,58,0.15), rgba(7,7,13,1)); display:flex; align-items:center; justify-content:center;">
@@ -1175,6 +1459,84 @@
       </div>
     </div>
   </div>
+
+  <!-- FULL PHOTO GALLERY -->
+  <section id="photo-gallery" style="padding: 6rem 5%;">
+    <div class="section-inner">
+      <div class="fade-in" style="text-align: center;">
+        <div class="section-tag" style="justify-content:center;"><span></span>Photo Gallery<span></span></div>
+        <h2 class="section-title">Inside the <em style="color:var(--gold);font-style:italic;">Ministry</em></h2>
+        <p class="section-body" style="margin: 0 auto;">A visual testimony of God's presence, power, and people — captured across our gatherings at Champions Royal Assembly.</p>
+      </div>
+      <div class="pgallery-grid fade-in fade-delay-1">
+
+        <div class="gallery-item pgallery-tall" data-src="church-images/church-auditorium/658297340_1546741596810277_5159966720512120512_n.jpg">
+          <img src="church-images/church-auditorium/658297340_1546741596810277_5159966720512120512_n.jpg" alt="Champions Royal Assembly" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">The Auditorium</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/choir/659184956_1546327056851731_5621848645131492660_n.jpg">
+          <img src="church-images/choir/659184956_1546327056851731_5621848645131492660_n.jpg" alt="Mass Choir" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Mass Choir</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/praise-and-worship/658903201_1546327066851730_2524414076447171909_n.jpg">
+          <img src="church-images/praise-and-worship/658903201_1546327066851730_2524414076447171909_n.jpg" alt="Praise and Worship" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Praise &amp; Worship</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/iginla-preaching/657818147_1546734500144320_5729057139938667991_n.jpg">
+          <img src="church-images/iginla-preaching/657818147_1546734500144320_5729057139938667991_n.jpg" alt="Prophet Iginla Preaching" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">The Preaching</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/iginla-healing/659266487_1546171203533983_6476959358148021730_n.jpg">
+          <img src="church-images/iginla-healing/659266487_1546171203533983_6476959358148021730_n.jpg" alt="Healing Ministry" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Healing Ministry</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/pastor-and-prophetess/659051912_1546522773498826_5829725071179621975_n.jpg">
+          <img src="church-images/pastor-and-prophetess/659051912_1546522773498826_5829725071179621975_n.jpg" alt="Prophet and Prophetess Iginla" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Our Hosts</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/church-auditorium/658337927_1546741600143610_3068119605517369856_n.jpg">
+          <img src="church-images/church-auditorium/658337927_1546741600143610_3068119605517369856_n.jpg" alt="Full church" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">80,000 Capacity</div>
+        </div>
+        <div class="gallery-item pgallery-wide" data-src="church-images/iginla-preaching/658362671_1546734386810998_2607368894365548947_n.jpg">
+          <img src="church-images/iginla-preaching/658362671_1546734386810998_2607368894365548947_n.jpg" alt="Prophet Iginla at the pulpit" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">At the Pulpit</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/congregants-writing/658949832_1546732926811144_1580414883278842327_n.jpg">
+          <img src="church-images/congregants-writing/658949832_1546732926811144_1580414883278842327_n.jpg" alt="Attendees taking notes" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Word-Hungry Attendees</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/pastor-and-prophetess/659080815_1546465023504601_3487092560867672301_n.jpg">
+          <img src="church-images/pastor-and-prophetess/659080815_1546465023504601_3487092560867672301_n.jpg" alt="Prophet and Prophetess" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Anointed Together</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/pastor-iginla-portrait/653806866_1540581860759584_3357212732422557589_n.jpg">
+          <img src="church-images/pastor-iginla-portrait/653806866_1540581860759584_3357212732422557589_n.jpg" alt="Prophet Joshua Iginla" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Prophet Joshua Iginla</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/praise-and-worship/658973235_1546499266834510_5200475866755942183_n.jpg">
+          <img src="church-images/praise-and-worship/658973235_1546499266834510_5200475866755942183_n.jpg" alt="Worship" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Atmosphere of Worship</div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdP1PF_1EaF1-dXADYlAJDzes2YEcihszpLaMcmFd-UQbc4A/viewform?usp=header" target="_blank" rel="noopener" class="btn-primary">Reserve My Seat →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- EXPECT / WHAT TO EXPECT -->
   <section id="expect">
@@ -1208,8 +1570,8 @@
           </div>
         </div>
         <div class="expect-image-stack fade-in fade-delay-2" style="padding-bottom: 1.5rem;">
-          <img class="expect-main-img" src="prophet-iginla (1).jpeg" alt="Prophet Joshua Iginla preaching" />
-          <img class="expect-float-img" src="miracle1.png" alt="Miracle in progress" />
+          <img class="expect-main-img" src="church-images/iginla-preaching/657527239_1546734653477638_4502868456232760462_n.jpg" alt="Prophet Joshua Iginla preaching" />
+          <img class="expect-float-img" src="church-images/iginla-healing/659113201_1546171210200649_644456548108062361_n.jpg" alt="Healing in progress" />
         </div>
       </div>
     </div>
@@ -1336,7 +1698,7 @@
         </div>
 
         <div class="invitation-right fade-in fade-delay-2">
-          <img class="invitation-img-main" src="prophet-iginla (2).jpeg" alt="Prophet Joshua Iginla" />
+          <img class="invitation-img-main" src="church-images/pastor-and-prophetess/659478694_1546650400152730_4698192454219312934_n.jpg" alt="Prophet and Prophetess Iginla" />
           <div class="invitation-badge">
             <div class="b-num">3</div>
             <div class="b-label">Days of<br />Encounter</div>
@@ -1380,7 +1742,7 @@
     <div class="section-inner">
       <div class="miracles-layout">
         <div class="fade-in">
-          <img class="miracle-photo" src="miracle1.png" alt="Miracle testimony" />
+          <img class="miracle-photo" src="church-images/iginla-healing/659266487_1546171203533983_6476959358148021730_n.jpg" alt="Prophet Iginla healing ministry" />
         </div>
         <div class="fade-in fade-delay-2">
           <div class="section-tag"><span></span>Supernatural Encounters</div>
@@ -1471,6 +1833,49 @@
     </div>
   </section>
 
+  <!-- ATMOSPHERE OF WORSHIP -->
+  <section id="worship" style="padding: 6rem 5%;">
+    <div class="section-inner">
+      <div class="fade-in" style="text-align: center; margin-bottom: 0;">
+        <div class="section-tag" style="justify-content:center;"><span></span>The Atmosphere<span></span></div>
+        <h2 class="section-title">Where Worship Meets<br /><em style="color:var(--gold);font-style:italic;">the Supernatural</em></h2>
+        <p class="section-body" style="margin: 0 auto 0;">Every gathering is saturated with an atmosphere of faith, praise, and the tangible presence of God. Come expecting a heavenly encounter.</p>
+      </div>
+      <div class="worship-mosaic fade-in fade-delay-1">
+        <div class="gallery-item worship-tall" data-src="church-images/choir/660370282_1546327186851718_8971377736261459567_n.jpg">
+          <img src="church-images/choir/660370282_1546327186851718_8971377736261459567_n.jpg" alt="Champions Royal Assembly Choir" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Mass Choir</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/praise-and-worship/658929239_1546327163518387_725430943230298836_n.jpg">
+          <img src="church-images/praise-and-worship/658929239_1546327163518387_725430943230298836_n.jpg" alt="Praise and Worship" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Praise &amp; Worship</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/iginla-preaching/658882068_1546734406810996_8770116072703724737_n.jpg">
+          <img src="church-images/iginla-preaching/658882068_1546734406810996_8770116072703724737_n.jpg" alt="Prophet Iginla ministering" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Powerful Ministration</div>
+        </div>
+        <div class="gallery-item worship-tall" data-src="church-images/pastor-and-prophetess/659784841_1546465000171270_1063766540484690214_n.jpg">
+          <img src="church-images/pastor-and-prophetess/659784841_1546465000171270_1063766540484690214_n.jpg" alt="Prophet and Prophetess Iginla" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Our Hosts</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/praise-and-worship/659715750_1546327016851735_3676244771002333535_n.jpg">
+          <img src="church-images/praise-and-worship/659715750_1546327016851735_3676244771002333535_n.jpg" alt="Congregation in worship" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">The Congregation</div>
+        </div>
+        <div class="gallery-item" data-src="church-images/choir/661166643_1546497140168056_5690525206059687340_n.jpg">
+          <img src="church-images/choir/661166643_1546497140168056_5690525206059687340_n.jpg" alt="Choir worship" />
+          <div class="gallery-item-overlay"></div>
+          <div class="gallery-caption">Choir in Glory</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SHORTS: MIRACLES & MINISTRATION -->
   <section id="shorts">
     <div class="section-inner">
@@ -1527,6 +1932,91 @@
       </div>
       <div style="text-align:center; margin-top:2.5rem;">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdP1PF_1EaF1-dXADYlAJDzes2YEcihszpLaMcmFd-UQbc4A/viewform?usp=header" target="_blank" rel="noopener" class="btn-primary">Reserve My Seat →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="faq-layout">
+        <div class="faq-left fade-in">
+          <div class="section-tag"><span></span>FAQ</div>
+          <h2 class="section-title">Frequently Asked<br /><em style="color:var(--gold);font-style:italic;">Questions</em></h2>
+          <p class="section-body">Everything you need to know before you attend. Can't find your answer? Call us directly.</p>
+          <div class="faq-cta-card">
+            <h3>Still have questions?</h3>
+            <p>Our team is available to help you with any enquiries about the event, directions, or registration.</p>
+            <a href="https://wa.me/2347035277520" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.78rem; padding:0.75rem 1.5rem;">Chat on WhatsApp →</a>
+          </div>
+        </div>
+        <div class="faq-list fade-in fade-delay-1">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">Is the event free to attend?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Yes, Nigeria: Mighty Turnaround 2026 is completely free to attend. However, we encourage you to register in advance to secure your seat, as the venue fills up quickly.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">Where exactly is Champions Royal Assembly located?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Champions Royal Assembly is located at Chikakore, Kubwa, Abuja, Federal Capital Territory, Nigeria. It is one of Africa's largest mega churches with a capacity of 80,000 worshippers. See the map at the bottom of this page for directions.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">What time do the sessions begin?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Friday 29th May begins at 4:00 PM. Saturday 30th and Sunday 31st May both begin at 7:00 AM. We recommend arriving at least 30 minutes early to get seated comfortably.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">Can I bring my children?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Absolutely. Families are warmly welcome. Children's provisions are available on site. We encourage you to bring your entire family — this event is for everyone who needs a turnaround.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">Will the event be streamed online?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>The event may be streamed on Joshua Iginla Ministries' official platforms. However, we strongly encourage physical attendance — there is no substitute for being present in the atmosphere of faith.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">What should I bring to the event?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Bring your Bible, a notebook, an open heart, and your full expectation. Come ready to receive your miracle. You are also welcome to bring friends, family, and anyone who needs a divine turnaround.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">What is the School of the Prophet?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>The School of the Prophet — Act of the Prophet is a special immersive prophetic training session running alongside the main convention throughout all three days. It is designed for those who want to grow in their prophetic gifting and understand the ways of the Spirit more deeply.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="faq-q-text">Is accommodation available nearby?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>There are several hotels and guest houses in and around Kubwa, Abuja. We recommend booking early as demand is high during convention periods. Contact us on WhatsApp for guidance on nearby accommodation options.</p></div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -1674,6 +2164,16 @@
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
 
     // Hamburger menu
     const hamburger = document.getElementById('hamburger');
